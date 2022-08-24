@@ -4,12 +4,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style type="text/css">
 		.header{
-			width: 80%;
-			height: 18%;
-			position: top left;
-			text-align: left;
+			width: 100%;
+			height: 5%;
+			position: top right;
+			text-align: center;
 			font-size: 50px;
-			border: 1px solid black;
 		}
 
 		.footer{
@@ -26,22 +25,42 @@
     <title>Pet wellness centar</title>
 </head>
 <body>
-	<div class="jumbotron" style="font-family: 'Times New Roman', serif;">
-		<div class="row">
-			<div class="col-md-5 col-sm-5 col-xs-5">
-				<h1 style="font-size:50px">Veterinarska ambulanta Pet Wellness Centar</h1>
+	<div class="header">
+		<div class="jumbotron bg-light">
+			<div class="container" style="height=10%">
+				<div style="text-align:center; font-size:30px; height=10%">
+					Pet wellness centar
+				</div>
+
+				<!-- Navigation Bar -->
+				<nav class="navbar navbar-expand-lg  navbar-light bg-light" style="font-size:15px">
+				<a class="navbar-brand" href="#"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="/">Početna <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/informacije">O nama</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/djelatnosti">Djelatnosti</a>
+					</li>
+					</ul>
+				</div>
+				</nav>
 			</div>
 		</div>
-	</div>
-
-	</div class="logo">
-		<img class="thumbnail" src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/66456847_2163216043976198_3687836925265182720_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=76wkQjxexlIAX85ft05&_nc_ht=scontent-vie1-1.xx&oh=00_AT9wwGCmabKBxrTHXVOMR2NHV2ftHAvQIaIcHEqHDt3I6A&oe=632A0FC5" height="10%" width="10%">
-	<div>
-
-	
+    </div>
 
     @yield('content')
 
+	<div class="footer">
+		Copyright Ivana Tus
+	</div>
    	
 </body>
 </html>

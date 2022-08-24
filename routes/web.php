@@ -22,3 +22,4 @@ Route::get('/informacije', function () {
 Route::get('/djelatnosti', function () {
     return view('djelatnosti');
 });
+

@@ -2,20 +2,5 @@
 
 @section('content')
     <div class="container text-center"  style="font-family: 'Times New Roman', serif;">
-        @auth
-        <div class="form-group">
-            <form id="shop" method="POST" action="{{ route('webshop.order') }}">
-                @csrf
-                @foreach($meals as $meal)
-                <label for={{ "quant" . $meal->id }}>{{ $meal->name }}</label>
-                <input id="{{ "quant" . $meal->id }}" name="{{ "quant" . $meal->id }}" type="number" placeholder="Količina">
-                <br><br>
-                @endforeach
-                <label for="adresa">Adresa: </label>
-                <input type="text" id="adresa" name="adresa"> <br><br>
-                <input type="submit" value="Naruči">
-            </form>
-        </div>
-        @endauth
-    </div>
+        <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/66612595_2163211773976625_6242292364061179904_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=-M8_SnkboJsAX9f1IjK&_nc_ht=scontent-vie1-1.xx&oh=00_AT9L-bexi10MOuaXCP-hCj52YMhHNQlXExD_4KTOWgh1Tw&oe=632D493A"  width="60%"></a>
 @endsection
