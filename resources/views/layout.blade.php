@@ -28,6 +28,25 @@
 	<div class="header">
 		<div class="jumbotron bg-light">
 			<div class="container" style="height=10%">
+				<div style="text-align:right; font-size:15px">
+					@guest
+					<a href="/login" >Prijava</a>
+					<a href="/register" >Registracija</a>
+					@else
+					<div class="mt-3 space-y-1">
+						<!-- Authentication -->
+						<form method="POST" action="{{ route('logout') }}">
+							@csrf
+
+							<x-responsive-nav-link :href="route('logout')"
+									onclick="event.preventDefault();
+												this.closest('form').submit();">
+								{{ __('Log Out') }}
+							</x-responsive-nav-link>
+						</form>
+					</div>
+					@endif
+				</div>
 				<div style="text-align:center; font-size:30px; height=10%">
 					Pet wellness centar
 				</div>
@@ -49,6 +68,15 @@
 					<li class="nav-item">
 						<a class="nav-link" href="/djelatnosti">Djelatnosti</a>
 					</li>
+
+					@auth
+					<li class="nav-item">
+						<a class="nav-link" href="/pregledi">Pregledi</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/profil">Vaš profil</a>
+					</li>
+					@endauth
 					</ul>
 				</div>
 				</nav>

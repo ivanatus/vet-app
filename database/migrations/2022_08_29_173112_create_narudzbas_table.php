@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNavbarsTable extends Migration
+class CreateNarudzbasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateNavbarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('navbars', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        {
+            Schema::create('narudzbas', function (Blueprint $table) {
+                $table->id();
+                $table->string('pacijent');
+                $table->text('vrijeme');
+                $table->timestamps();
+            });
+        }
     }
 
     /**
@@ -26,6 +30,6 @@ class CreateNavbarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('navbars');
+        Schema::dropIfExists('narudzbas');
     }
 }

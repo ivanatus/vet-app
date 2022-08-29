@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\preglediController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/informacije', function () {
     return view('o-nama');
 });
@@ -23,3 +26,22 @@ Route::get('/djelatnosti', function () {
     return view('djelatnosti');
 });
 
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/pregledi', function () {
+    return view('pregledi');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+Route::get('add-news-form', [NewsController::class, 'index']);
+Route::post('store-form1', [NewsController::class, 'store']);
+
+Route::get('pregledi', [preglediController::class, 'index']);
+Route::post('store-form2', [preglediController::class, 'store']);
