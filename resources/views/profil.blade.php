@@ -1,23 +1,31 @@
 @extends('layout')
 
 @section('content')
-<h1 style="font-family: 'Times New Roman', serif;">Povijest bolesti</h1>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Bolest</th>
-      <th scope="col">Tretman</th>
-      <th scope="col">Datum tretmana</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <th scope="row">a</th>
-        <td>b</td>
-        <td>c</td>
-        <td>d</td>
-      </tr>
-  </tbody>
-</table>
+<div class="card">
+  <div class="card-header">
+    <h4 style="text-align:center">Povijest bolesti</h4>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Bolest</th>
+          <th scope="col">Tretman</th>
+          <th scope="col">Datum tretmana</th>
+        </tr>
+      </thead>
+      <tbody>
+          @foreach ($illness as $illdata)
+          <tr>
+            <th scope="row"> {{ $illdata->id }}</th>
+            <td>{{ $illdata->bolest }}</td>
+            <td>{{ $illdata->tretman }}</td>
+            <td>{{ $illdata->datum }}</td>
+          </tr>
+          @endforeach
+      </tbody>
+    </table>
+  </div>
+</div>
 @endsection

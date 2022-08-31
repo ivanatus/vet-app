@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\preglediController;
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +17,8 @@ use App\Http\Controllers\preglediController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('home', [HomeController::class, 'index']);
 
 Route::get('/informacije', function () {
     return view('o-nama');
@@ -26,9 +27,7 @@ Route::get('/djelatnosti', function () {
     return view('djelatnosti');
 });
 
-Route::get('/profil', function () {
-    return view('profil');
-});
+
 
 Route::get('/pregledi', function () {
     return view('pregledi');
@@ -45,3 +44,5 @@ Route::post('store-form1', [NewsController::class, 'store']);
 
 Route::get('pregledi', [preglediController::class, 'index']);
 Route::post('store-form2', [preglediController::class, 'store']);
+
+Route::get('profil', [ProfilController::class, 'index']);

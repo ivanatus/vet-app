@@ -18,7 +18,12 @@
                     <h1 style="font-family: 'Times New Roman', serif; text-align: center;">Novosti</h1>
                 </div>
                 <div class="">
-                    SOME CONTENT...
+                    @foreach ($novosti as $novost)
+                    <div class="container">
+                        <h4>{{ $novost->title }}
+                    </div>
+                    <p>{{ $novost->description }}</p>
+                    @endforeach
                 </div>
             </div>
             <div class="my-auto">
