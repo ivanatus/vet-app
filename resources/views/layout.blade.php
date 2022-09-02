@@ -60,7 +60,7 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link" href="/">Početna <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="/home">Početna <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/informacije">O nama</a>
@@ -70,12 +70,27 @@
 					</li>
 
 					@auth
-					<li class="nav-item">
-						<a class="nav-link" href="/pregledi">Pregledi</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/profil">Vaš profil</a>
-					</li>
+						@if(Auth::user()->name === 'admin')
+							<li class="nav-item">
+								<a class="nav-link" href="/add-news-form">Kreiraj novost</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/profil">Povijest tretmana</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/pregledi">Pregled narudžbi</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/klijenti">Klijenti</a>
+							</li>
+						@else
+							<li class="nav-item">
+								<a class="nav-link" href="/pregledi">Pregledi</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/profil">Vaš profil</a>
+							</li>
+						@endif
 					@endauth
 					</ul>
 				</div>

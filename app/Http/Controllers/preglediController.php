@@ -6,7 +6,8 @@ class preglediController extends Controller
 {
     public function index()
     {
-        return view('pregledi');
+        $pregled = narudzba::all();
+        return view('pregledi', compact('pregled'));
     }
     public function store(Request $request)
     {

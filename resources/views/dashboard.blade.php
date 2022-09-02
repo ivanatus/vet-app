@@ -1,8 +1,7 @@
 @extends('layout')
 
 @section('content')
-<x-app-layout>
-    <x-slot name="header">
-    </x-slot>
-</x-app-layout>
+    <div class="container">
+        <h1 style="text-align: center">Dobrodošli, {{ Auth::user()->name }}!</h1>
+    </div>
 @endsection

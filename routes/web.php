@@ -5,6 +5,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\preglediController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KlijentiController;
+use App\Http\Controllers\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-
 Route::get('home', [HomeController::class, 'index']);
 
 Route::get('/informacije', function () {
@@ -27,7 +28,9 @@ Route::get('/djelatnosti', function () {
     return view('djelatnosti');
 });
 
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/pregledi', function () {
     return view('pregledi');
@@ -45,4 +48,8 @@ Route::post('store-form1', [NewsController::class, 'store']);
 Route::get('pregledi', [preglediController::class, 'index']);
 Route::post('store-form2', [preglediController::class, 'store']);
 
-Route::get('profil', [ProfilController::class, 'index']);
+Route::get('profil', [ProfilController::class, 'index'])->middleware(['auth'])->name('profil');
+Route::post('store-form3', [ProfilController::class, 'store']);
+
+Route::get('klijenti', [KlijentiController::class, 'index']);
+Route::get('delete-user', [KlijentiController::class, 'delete']);
