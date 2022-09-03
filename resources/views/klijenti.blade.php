@@ -22,7 +22,7 @@
                         <th scope="row"> {{ $klijent->id }}</th>
                         <td>{{ $klijent->name }}</td>
                         <td>{{ $klijent->email }}</td>
-                        <td><a href="/delete-user">delete</form></td>
+                        <td><a href={{"delete-user/".$klijent['id']}}>Delete</a></td>
                     </tr>
                 @endunless
             @endforeach

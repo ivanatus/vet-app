@@ -17,4 +17,9 @@ class preglediController extends Controller
         $narudzba->save();
         return redirect('pregledi')->with('status', 'Vaša narudžba je zabilježena');
     }
+    public function delete($id){
+        $narudzba = narudzba::find($id);
+        $narudzba->delete();
+        return redirect('pregledi');
+    }
 }

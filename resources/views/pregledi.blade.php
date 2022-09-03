@@ -42,6 +42,7 @@
               <th scope="col">id</th>
               <th scope="col">Pacijent</th>
               <th scope="col">Vrijeme i simptomi</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -50,6 +51,7 @@
               <th scope="row"> {{ $narudzba->id }}</th>
               <td>{{ $narudzba->pacijent }}</td>
               <td>{{ $narudzba->vrijeme }}</td>
+              <td><a href={{"delete-pregled/".$narudzba['id']}}>Delete</a></td>
               </tr>
             @endforeach
           </tbody>

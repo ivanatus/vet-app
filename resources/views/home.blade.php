@@ -25,7 +25,8 @@
                         <p>{{ $novost->description }}</p>
                         @auth
                             @if (Auth::user()->name === 'admin')
-                                <a href='/edit-news' style="text-align: center;">Edit</a>
+                            <a href={{"edit-news/".$novost['id']}}>Edit</a>
+                                <a href='/{{"delete-news/".$novost['id']}}' style="text-align: center;">Delete</a>
                             @endif
                         @endauth
                     @endforeach

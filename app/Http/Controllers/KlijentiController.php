@@ -13,10 +13,9 @@ class KlijentiController extends Controller
         return view('klijenti', compact('klijenti'));
     }
 
-    public function delete(Request $request){
-        $klijent = new Klijenti;
-        $klijent->name = $request->name;
-        $klijent = Klijenti::find($request->name);
+    public function delete($id){
+        $klijent = Klijenti::find($id);
         $klijent->delete();
+        return redirect('klijenti');
     }
 }
