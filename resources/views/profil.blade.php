@@ -9,10 +9,10 @@
         </div>
       @endif
       <div class="card">
-        <div class="card-header text-center font-weight-bold">
+        <div class="card-header text-center font-weight-bold" style="color: #334c52">
           Upis u povijest bolesti
         </div>
-        <div class="card-body">
+        <div class="card-body" style="color: #334c52">
           <form name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{url('store-form3')}}">
           @csrf
             <div class="form-group">
@@ -44,10 +44,10 @@
   @endif
 <br>
 <div class="card">
-  <div class="card-header">
+  <div class="card-header" style="color: #334c52">
     <h4 style="text-align:center">Povijest bolesti</h4>
   </div>
-  <div class="card-body">
+  <div class="card-body" style="color: #334c52">
     <table class="table">
       <thead>
         <tr>

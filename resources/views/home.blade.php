@@ -12,15 +12,15 @@
                     align-items-baseline
                     "                
              style="background-size: 100%;
-                 background-position: center;">
+                 background-position: center; padding-left: 1em;">
             <div class="w-75">
                 <div class="">
-                    <h1 style="font-family: 'Times New Roman', serif; text-align: center;">Novosti</h1>
+                    <h1 style="font-family: monospace, serif; text-align: center; color: #334c52">Novosti</h1>
                 </div>
                 <div class="">
                         @foreach ($novosti as $novost)
                         <div class="container">
-                            <h4>{{ $novost->title }}
+                            <h4 style="color: #334c52">{{ $novost->title }}</h4>
                         </div>
                         <p>{{ $novost->description }}</p>
                         @auth

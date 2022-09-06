@@ -2,14 +2,14 @@
 
 @section('content')
   @unless (Auth::user()->name === 'admin')
-    <div class="container mt-4">
+    <div class="container mt-4 bg-#76a5b0">
     @if(session('status'))
       <div class="alert alert-success">
           {{ session('status') }}
       </div>
     @endif
-    <div class="card">
-      <div class="card-header text-center font-weight-bold">
+    <div class="card bg-#76a5b0">
+      <div class="card-header text-center font-weight-bold" style="color: #334c52">
         Narudžba pacijenta na pregled
       </div>
       <div class="card-body">
@@ -31,11 +31,11 @@
   @endunless
 <br>
   @if (Auth::user()->name === 'admin')
-    <div class="card">
-      <div class="card-header text-center font-weight-bold">
+    <div class="card bg-#76a5b0">
+      <div class="card-header text-center font-weight-bold" style="color: #334c52">
         Pregledi
       </div>
-      <div class="card-body">
+      <div class="card-body" style="color: #334c52">
         <table class="table">
           <thead>
             <tr>

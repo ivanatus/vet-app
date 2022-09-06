@@ -57,3 +57,7 @@ Route::post('store-form3', [ProfilController::class, 'store']);
 
 Route::get('klijenti', [KlijentiController::class, 'index']);
 Route::get('delete-user/{id}', [KlijentiController::class, 'delete']);
+
+Route::get('/test', function () {
+    return view('reacttest');
+});

@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="card">
-      <div class="card-header text-center font-weight-bold">
+      <div class="card-header text-center font-weight-bold" style="color: #334c52">
         Profili klijenata
       </div>
-      <div class="card-body">
+      <div class="card-body" style="color: #334c52">
         <table class="table">
             <thead>
                 <tr>
@@ -22,7 +22,7 @@
                         <th scope="row"> {{ $klijent->id }}</th>
                         <td>{{ $klijent->name }}</td>
                         <td>{{ $klijent->email }}</td>
-                        <td><a href={{"delete-user/".$klijent['id']}}>Delete</a></td>
+                        <td><button class="btn btn-#76a5b0"><a href={{"delete-user/".$klijent['id']}}>Delete</a></button></td>
                     </tr>
                 @endunless
             @endforeach

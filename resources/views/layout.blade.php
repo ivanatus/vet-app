@@ -5,32 +5,26 @@
     <style type="text/css">
 		.header{
 			width: 100%;
-			height: 5%;
-			position: top right;
-			text-align: center;
-			font-size: 50px;
-		}
-
-		.footer{
-			position: bottom center;
-			width: 100%;
-			text-align: left;
-			font-size: 10px;
-			border: 1px solid black;
+            height: 5%;
+            position: top right;
+            text-align: center;
+            font-size: 50px;
+            background-color: #76a5b0;
+            padding-top: 1em;
+			color: #334c52;
 		}
     </style>
-
+	<script src="{{ asset('js/app.js') }}" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet wellness centar</title>
 </head>
-<body>
+<body style="background-color:#76a5b0; color: white; font-family: monospace;">
 	<div class="header">
-		<div class="jumbotron bg-light">
-			<div class="container" style="height=10%">
-				<div style="text-align:right; font-size:15px">
+		<div class="container">
+				<div style="text-align:right; font-size:15px; color: black">
 					@guest
-					<a href="/login" >Prijava</a>
+					<a href="/login">Prijava</a>
 					<a href="/register" >Registracija</a>
 					@else
 					<div class="mt-3 space-y-1">
@@ -48,11 +42,11 @@
 					@endif
 				</div>
 				<div style="text-align:center; font-size:30px; height=10%">
-					Pet wellness centar
+					PET WELLNESS CENTAR
 				</div>
 
 				<!-- Navigation Bar -->
-				<nav class="navbar navbar-expand-lg  navbar-light bg-light" style="font-size:15px">
+				<nav class="navbar navbar-expand-lg  navbar-light bg-#76a5b0" style="font-size:15px">
 				<a class="navbar-brand" href="#"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -95,15 +89,12 @@
 					</ul>
 				</div>
 				</nav>
+				<hr />
 			</div>
-		</div>
     </div>
 
     @yield('content')
-
-	<div class="footer">
-		Copyright Ivana Tus
-	</div>
    	
+	<div id='footer'></div>
 </body>
 </html>
