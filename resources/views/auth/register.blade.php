@@ -5,8 +5,9 @@
     <x-auth-card>
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('register') }}">
+        
+        <div class="container" style="background-color:#D0D7DC;">
+        <form method="POST" action="{{ route('register') }}" >
             @csrf
 
             <!-- Name -->
@@ -43,7 +44,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style = "color: #334c52;">
                     {{ __('Already registered?') }}
                 </a>
 
@@ -52,6 +53,7 @@
                 </x-button>
             </div>
         </form>
+        </div>
     </x-auth-card>
 </x-guest-layout>
 @endsection

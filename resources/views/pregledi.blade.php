@@ -51,7 +51,7 @@
               <th scope="row"> {{ $narudzba->id }}</th>
               <td>{{ $narudzba->pacijent }}</td>
               <td>{{ $narudzba->vrijeme }}</td>
-              <td><a href={{"delete-pregled/".$narudzba['id']}}>Delete</a></td>
+              <td><button type="button" class="btn btn-outline-secondary"><a href={{"delete-pregled/".$narudzba['id']}} style = "color: #334c52; decoration: none;">Delete</a></button></td>
               </tr>
             @endforeach
           </tbody>

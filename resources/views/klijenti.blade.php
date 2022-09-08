@@ -22,7 +22,7 @@
                         <th scope="row"> {{ $klijent->id }}</th>
                         <td>{{ $klijent->name }}</td>
                         <td>{{ $klijent->email }}</td>
-                        <td><button class="btn btn-#76a5b0"><a href={{"delete-user/".$klijent['id']}}>Delete</a></button></td>
+                        <td><button type="button" class="btn btn-outline-secondary"><a href={{"delete-user/".$klijent['id']}}  style = "color: #334c52; decoration: none;">Delete</a></button></td>
                     </tr>
                 @endunless
             @endforeach

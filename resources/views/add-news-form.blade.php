@@ -23,9 +23,6 @@
           <textarea name="description" class="form-control" required=""></textarea>
         </div>
 
-        <label for="pic">Slika:</label><br>
-        <input type="file" id="pic" name="pic"><br><br>
-
         <button type="submit" class="btn btn-primary">Dodaj</button>
       </form>
     </div>

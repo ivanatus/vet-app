@@ -28,8 +28,8 @@ class NewsController extends Controller
     }
     public function edit(Request $request){
         $news = News::all();
-        
-        if($news->id === $request->id){
+        $id_news = $request->id;
+        if($news->id === $id_news){
             $news->title = $request->title;
             $news->description = $request->description;
             $news->save();

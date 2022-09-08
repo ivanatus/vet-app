@@ -61,7 +61,7 @@
           @if (Auth::user()->name === 'admin')
             @foreach ($illness as $illdata)
             <tr>
-              <th scope="row"> {{ $illdata->id }}</th>
+              <th scope="row"> {{ $illdata->id }}, {{ $illdata->User }}</th>
               <td>{{ $illdata->bolest }}</td>
               <td>{{ $illdata->tretman }}</td>
               <td>{{ $illdata->datum }}</td>
