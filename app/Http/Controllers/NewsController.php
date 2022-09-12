@@ -14,26 +14,26 @@ class NewsController extends Controller
         $news->title = $request->title;
         $news->description = $request->description;
         $news->save();
-        return redirect('add-news-form')->with('status', 'News Form Data Has Been inserted');
+        return redirect('add-news-form')->with('status', 'Dodana je novost na početnu stranicu');
     }
     public function delete($id){
         $news = News::find($id);
         $news->delete();
         return redirect('home');
     }
-    public function editform($id)
+    public function edit($id)
     {
         $news = News::find($id);
         return view('edit-news', compact('news'));
     }
-    public function edit(Request $request){
-        $news = News::all();
-        $id_news = $request->id;
-        if($news->id === $id_news){
-            $news->title = $request->title;
-            $news->description = $request->description;
-            $news->save();
-        }
+    public function update(Request $request)
+    {
+        $id = $request->id;
+        $news = News::find($id);
+        $news->title = $request->title;
+        $news->description = $request->description;
+
+        $news->save();
         return redirect('home');
     }
 }

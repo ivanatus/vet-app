@@ -45,8 +45,8 @@ require __DIR__.'/auth.php';
 Route::get('add-news-form', [NewsController::class, 'index']);
 Route::post('store-form1', [NewsController::class, 'store']);
 Route::get('delete-news/{id}', [NewsController::class, 'delete']);
-Route::get('edited-news', [NewsController::class, 'edit']);
-Route::get('edit-news/{id}', [NewsController::class, 'editform']);
+Route::get('edited-news', [NewsController::class, 'update']);
+Route::get('edit-news/{id}', [NewsController::class, 'edit']);
 
 Route::get('pregledi', [preglediController::class, 'index']);
 Route::post('store-form2', [preglediController::class, 'store']);
@@ -57,7 +57,3 @@ Route::post('store-form3', [ProfilController::class, 'store']);
 
 Route::get('klijenti', [KlijentiController::class, 'index']);
 Route::get('delete-user/{id}', [KlijentiController::class, 'delete']);
-
-Route::get('/test', function () {
-    return view('reacttest');
-});

@@ -17,12 +17,12 @@
                 @csrf
 
                 <div class="mb-3">
-                    <label for="">Title</label>
+                    <label for="">Naslov</label>
                     <input type="varchar" name="title" value="{{ $news->title }}" class="form-control" />
                 </div>
 
                 <div class="mb-3">
-                    <label for="">Description</label>
+                    <label for="">Sadržaj</label>
                     <input type="text" name="description" class="form-control" />
                 </div>
 
